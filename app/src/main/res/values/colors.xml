@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent_black_hex_1">#11000000</color>
+    <color name="transparent_black_hex_2">#22000000</color>
+    <color name="transparent_black_hex_3">#33000000</color>
+    <color name="transparent_black_hex_4">#44000000</color>
+    <color name="transparent_black_hex_5">#55000000</color>
+    <color name="transparent_black_hex_6">#66000000</color>
+    <color name="transparent_black_hex_7">#77000000</color>
+    <color name="transparent_black_hex_8">#88000000</color>
+    <color name="transparent_black_hex_9">#99000000</color>
+    <color name="transparent_black_hex_10">#aa000000</color>
+    <color name="transparent_black_hex_11">#bb000000</color>
+    <color name="transparent_black_hex_12">#cc000000</color>
+    <color name="transparent_black_hex_13">#dd000000</color>
+    <color name="transparent_black_hex_14">#ee000000</color>
+    <color name="transparent_black_hex_15">#ff000000</color>
+
+    <color name="transparent_black_percent_5">#0D000000</color>
+    <color name="transparent_black_percent_10">#1A000000</color>
+    <color name="transparent_black_percent_15">#26000000</color>
+    <color name="transparent_black_percent_20">#33000000</color>
+    <color name="transparent_black_percent_25">#40000000</color>
+    <color name="transparent_black_percent_30">#4D000000</color>
+    <color name="transparent_black_percent_35">#59000000</color>
+    <color name="transparent_black_percent_40">#66000000</color>
+    <color name="transparent_black_percent_45">#73000000</color>
+    <color name="transparent_black_percent_50">#80000000</color>
+    <color name="transparent_black_percent_55">#8C000000</color>
+    <color name="transparent_black_percent_60">#99000000</color>
+    <color name="transparent_black_percent_65">#A6000000</color>
+    <color name="transparent_black_percent_70">#B3000000</color>
+    <color name="transparent_black_percent_75">#BF000000</color>
+    <color name="transparent_black_percent_80">#cc000000</color>
+    <color name="transparent_black_percent_85">#D9000000</color>
+    <color name="transparent_black_percent_90">#E6000000</color>
+    <color name="transparent_black_percent_95">#F2000000</color>
+
+    <!-- White Transparent -->
+    <color name="transparent_white_hex_1">#11ffffff</color>
+    <color name="transparent_white_hex_2">#22ffffff</color>
+    <color name="transparent_white_hex_3">#33ffffff</color>
+    <color name="transparent_white_hex_4">#44ffffff</color>
+    <color name="transparent_white_hex_5">#55ffffff</color>
+    <color name="transparent_white_hex_6">#66ffffff</color>
+    <color name="transparent_white_hex_7">#77ffffff</color>
+    <color name="transparent_white_hex_8">#88ffffff</color>
+    <color name="transparent_white_hex_9">#99ffffff</color>
+    <color name="transparent_white_hex_10">#aaffffff</color>
+    <color name="transparent_white_hex_11">#bbffffff</color>
+    <color name="transparent_white_hex_12">#ccffffff</color>
+    <color name="transparent_white_hex_13">#ddffffff</color>
+    <color name="transparent_white_hex_14">#eeffffff</color>
+    <color name="transparent_white_hex_15">#ffffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="bg_gradient_start">#31244e</color>
+    <color name="bg_gradient_end">#6b394c</color>
+    <color name="pure_black">#000000</color>
+
+    <color name="transparent_white_percent_5">#0Dffffff</color>
+    <color name="transparent_white_percent_10">#1Affffff</color>
+    <color name="transparent_white_percent_15">#26ffffff</color>
+    <color name="transparent_white_percent_20">#33ffffff</color>
+    <color name="transparent_white_percent_25">#40ffffff</color>
+    <color name="transparent_white_percent_30">#4Dffffff</color>
+    <color name="transparent_white_percent_35">#59ffffff</color>
+    <color name="transparent_white_percent_40">#66ffffff</color>
+    <color name="transparent_white_percent_45">#73ffffff</color>
+    <color name="transparent_white_percent_50">#80ffffff</color>
+    <color name="transparent_white_percent_55">#8Cffffff</color>
+    <color name="transparent_white_percent_60">#99ffffff</color>
+    <color name="transparent_white_percent_65">#A6ffffff</color>
+    <color name="transparent_white_percent_70">#B3ffffff</color>
+    <color name="transparent_white_percent_75">#BFffffff</color>
+    <color name="transparent_white_percent_80">#CCffffff</color>
+    <color name="transparent_white_percent_85">#D9ffffff</color>
+    <color name="transparent_white_percent_90">#E6ffffff</color>
+    <color name="transparent_white_percent_95">#F2ffffff</color>
+    <color name="AppDark">#000000</color>
+    <color name="AppLight">#ffffff</color>
+</resources>
