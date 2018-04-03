@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SNavigationDrawer">
+        <attr name="appbarColor" format="color" />
+        <attr name="appbarTitleTextColor" format="color" />
+        <attr name="appbarTitleTextSize" format="dimension"/>
+        <attr name="HamMenuIconTintColor" format="color" />
+        <attr name="HamMenuIconSize" format="dimension" />
+        <attr name="HamMenuItemSemiTransparentColor" format="color" />
+        <attr name="navigationDrawerBackgroundColor" format="color" />
+        <attr name="primaryMenuItemTextColor" format="color" />
+        <attr name="secondaryMenuItemTextColor" format="color" />
+        <attr name="primaryMenuItemTextSize" format="dimension"/>
+        <attr name="secondaryMenuItemTextSize" format="dimension"/>
+    </declare-styleable>
+
+</resources>
