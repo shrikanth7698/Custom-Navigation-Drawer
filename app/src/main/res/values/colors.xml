@@ -3,6 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="red">#ff6767</color>
+    <color name="orange">#ffb067</color>
+    <color name="green">#67ffae</color>
+    <color name="blue">#6785ff</color>
     <color name="transparent_black_hex_1">#11000000</color>
     <color name="transparent_black_hex_2">#22000000</color>
     <color name="transparent_black_hex_3">#33000000</color>

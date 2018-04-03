@@ -124,6 +124,24 @@ public class SNavigationDrawer extends RelativeLayout{
 
         menuItemList = new ArrayList<>();
 
+
+
+        menuIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                hamMenuClicked();
+                if(navOpen){
+                    closeDrawer();
+                }
+                else {
+                    openDrawer();
+                }
+            }
+        });
+
+    }
+
+    protected void initMenu(){
         for(int i=0;i<menuItemList.size();i++){
             View view = LayoutInflater.from(getContext()).inflate(R.layout.menu_row_item,null);
 
@@ -132,9 +150,9 @@ public class SNavigationDrawer extends RelativeLayout{
             ImageView backgroundIV = view.findViewById(R.id.backgroundIV);
             CardView backgroundCV = view.findViewById(R.id.backgroundCV);
             View tintView = (View) view.findViewById(R.id.tintView);
-            tintView.setBackgroundColor(getResources().getColor(menuItemSemiTransparentColor));
-            titleTV.setTextColor(getResources().getColor(secondaryMenuItemTextColor));
-            titleTV1.setTextColor(getResources().getColor(primaryMenuItemTextColor));
+            tintView.setBackgroundColor(menuItemSemiTransparentColor);
+            titleTV.setTextColor(secondaryMenuItemTextColor);
+            titleTV1.setTextColor(primaryMenuItemTextColor);
             titleTV.setTextSize(secondaryMenuItemTextSize);
             titleTV1.setTextSize(primaryMenuItemTextSize);
             final RelativeLayout rootRL = view.findViewById(R.id.rootRL);
@@ -158,9 +176,7 @@ public class SNavigationDrawer extends RelativeLayout{
                         backCV1.animate().translationX(rootRL.getX()-backCV1.getWidth()).setDuration(300).start();
 
                         currentPos=Integer.valueOf(view.getTag().toString());
-                        if(onMenuItemClickListener!=null){
-                            onMenuItemClickListener.onMenuItemClicked(currentPos);
-                        }
+                        menuItemClicked(currentPos);
 
                         appbarTitleTV.setText(menuItemList.get(currentPos).getTitle());
 
@@ -183,39 +199,11 @@ public class SNavigationDrawer extends RelativeLayout{
                             }
                         },300);
                         //Close Navigation Drawer
-                        appbarTitleTV.animate().translationX(centerX).start();
-
-                        navOpen=false;
-                        final int[] stateSet = {android.R.attr.state_checked * (navOpen ? 1 : -1)};
-                        menuIV.setImageState(stateSet,true);
-                        containerCV.animate().translationX(rootLayout.getX()).translationY(rootLayout.getY()).setDuration(500).start();
-                        final Handler handler = new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                containerCV.setCardElevation((float) 0);
-                                containerCV.setRadius((float)0);
-                            }
-                        },500);
+                       closeDrawer();
                     }
                     else{
-                        if(onMenuItemClickListener!=null){
-                            onMenuItemClickListener.onMenuItemClicked(currentPos);
-                        }
-                        //Close Navigation Drawer
-                        appbarTitleTV.animate().translationX(centerX).start();
-                        navOpen=false;
-                        final int[] stateSet = {android.R.attr.state_checked * (navOpen ? 1 : -1)};
-                        menuIV.setImageState(stateSet,true);
-                        containerCV.animate().translationX(rootLayout.getX()).translationY(rootLayout.getY()).setDuration(500).start();
-                        final Handler handler = new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                containerCV.setCardElevation((float) 0);
-                                containerCV.setRadius((float)0);
-                            }
-                        },500);
+                        menuItemClicked(currentPos);
+                        closeDrawer();
                     }
                 }
             });
@@ -224,20 +212,6 @@ public class SNavigationDrawer extends RelativeLayout{
             titleTV1.setText(menuItemList.get(i).getTitle());
             menuLL.addView(view);
         }
-
-        menuIV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                hamMenuClicked();
-                if(navOpen){
-                    closeDrawer();
-                }
-                else {
-                    openDrawer();
-                }
-            }
-        });
-
     }
 
     //Hamburger button Click Listener
@@ -319,6 +293,7 @@ public class SNavigationDrawer extends RelativeLayout{
     }
 
     protected void drawerClosed(){
+        System.out.println("Drawer Closing");
         if(drawerListener!=null){
             drawerListener.onDrawerClosed();
             drawerListener.onDrawerStateChanged(STATE_CLOSED);
@@ -341,10 +316,7 @@ public class SNavigationDrawer extends RelativeLayout{
 
     //Closes drawer
     public void closeDrawer(){
-        if(drawerListener!=null){
-            drawerListener.onDrawerClosing();
-            drawerListener.onDrawerStateChanged(STATE_CLOSING);
-        }
+        drawerClosing();
         navOpen=false;
         final int[] stateSet = {android.R.attr.state_checked * (navOpen ? 1 : -1)};
         menuIV.setImageState(stateSet,true);
@@ -355,10 +327,7 @@ public class SNavigationDrawer extends RelativeLayout{
             @Override
             public void run() {
 
-                if(drawerListener!=null){
-                    drawerListener.onDrawerClosed();
-                    drawerListener.onDrawerStateChanged(STATE_CLOSED);
-                }
+                drawerClosed();
                 containerCV.setCardElevation((float) 0);
                 containerCV.setRadius((float)0);
             }
@@ -368,25 +337,19 @@ public class SNavigationDrawer extends RelativeLayout{
     //Opens Drawer
     public void openDrawer(){
 
-        if(drawerListener!=null){
-            drawerListener.onDrawerOpening();
-            drawerListener.onDrawerStateChanged(STATE_OPENING);
-        }
+        drawerOpening();
         navOpen=true;
         final int[] stateSet = {android.R.attr.state_checked * (navOpen ? 1 : -1)};
         menuIV.setImageState(stateSet,true);
         containerCV.setCardElevation((float) 100.0);
         containerCV.setRadius((float)60.0);
-        appbarTitleTV.animate().translationX(centerX+menuIV.getWidth()*2-appbarRL.getWidth()/2).start();
+        appbarTitleTV.animate().translationX(centerX+menuIV.getWidth()+menuIV.getWidth()/4+appbarTitleTV.getWidth()/2-appbarRL.getWidth()/2).start();
         containerCV.animate().translationX(rootLayout.getX() +(rootLayout.getWidth() / 8)+ (rootLayout.getWidth() / 2) ).translationY(250).setDuration(500).start();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(drawerListener!=null){
-                    drawerListener.onDrawerOpened();
-                    drawerListener.onDrawerStateChanged(STATE_OPEN);
-                }
+                drawerOpened();
             }
         },250);
     }
@@ -408,6 +371,16 @@ public class SNavigationDrawer extends RelativeLayout{
 
     }
 
+    //To change the AppBar Title
+    public void setAppbarTitleTV(String name){
+        appbarTitleTV.setText(name);
+    }
+
+    //To check if drawer is open or not
+    public boolean isDrawerOpen() {
+        return navOpen;
+    }
+
     //Adding menu to drawer
     public void addMenuItem(MenuItem menuItem){
         if(menuItemList!=null){
@@ -423,8 +396,8 @@ public class SNavigationDrawer extends RelativeLayout{
     //Setting the list of Menu Items
     public void setMenuItemList(List<MenuItem> menuItemList) {
         this.menuItemList = menuItemList;
+        initMenu();
     }
-
 
     /*
      *
