@@ -2,6 +2,7 @@ package com.shrikanthravi.customnavigationdrawer2.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.annotation.IntDef;
 import android.support.v7.widget.CardView;
@@ -502,5 +503,10 @@ public class SNavigationDrawer extends RelativeLayout{
     public void setSecondaryMenuItemTextSize(float secondaryMenuItemTextSize) {
         this.secondaryMenuItemTextSize = secondaryMenuItemTextSize;
         invalidate();
+    }
+
+    //to change the typeface of appbar title
+    public void setAppbarTitleTypeface(Typeface titleTypeface){
+        appbarTitleTV.setTypeface(titleTypeface);
     }
 }
