@@ -5,6 +5,8 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-swag.svg)](https://forthebadge.com)
 
+<a href='https://ko-fi.com/O5O2BPL1' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 
 
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Custom%20Navigation%20Drawer-green.svg?style=flat )]( https://android-arsenal.com/details/1/6876 )
