@@ -230,6 +230,9 @@ And then in your Activity or fragment
       
 ```
 
+### Developed by
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="shrikanthravi"><a class="LI-simple-link" href='https://in.linkedin.com/in/shrikanthravi?trk=profile-badge'>Shrikanth Ravi</a></div>
+
   
 ### License
 ```
