@@ -12,17 +12,6 @@ It has smooth zoom-in, zoom-out animation when switched from one fragment to ano
 Still in Active Development.
 
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Custom%20Navigation%20Drawer-green.svg?style=flat )]( https://android-arsenal.com/details/1/6876 )
-
-<table>
-  <tr>
-    <td>
-       <img src="https://drive.google.com/uc?id=1lD36VKEDD6PIkFZo6nicjx_Du8qh5_kE" width="300">
-    </td>
-    <td>
-      <img src="https://drive.google.com/uc?id=1TZHRXq-8Y75Pxk05YiF0tfQNSxhjrnKW" width="300">
-    </td>    
-  </tr>
-  </table>
   
   ### Version
 [![](https://jitpack.io/v/shrikanth7698/Custom-Navigation-Drawer.svg)](https://jitpack.io/#shrikanth7698/Custom-Navigation-Drawer)
