@@ -9,7 +9,7 @@
 
 It has smooth zoom-in, zoom-out animation when switched from one fragment to another.
 
-Still in Active Development.
+## Repo no longer being maintained.
 
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Custom%20Navigation%20Drawer-green.svg?style=flat )]( https://android-arsenal.com/details/1/6876 )
   
