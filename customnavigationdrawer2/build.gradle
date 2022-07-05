@@ -1,17 +1,15 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.shrikanth7698'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 32
 
 
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 32
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
